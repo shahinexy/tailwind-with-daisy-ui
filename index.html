@@ -13,13 +13,17 @@
 <body>
     <header class="container max-w-[1440px] mx-auto">
       <nav>
-        <div class="navbar bg-base-100 w-full">
-          <div class="">
+        <div class="navbar bg-[#F85559] rounded-full w-full px-5 my-12">
+          <div class="flex justify-between w-full">
+            <div class="nav-brand flex gap-3 lg:hidden">
+              <img class="w-7" src="assets/images/nav-brand.png" alt="">
+              <h2 class="text-xl">Fruit Burst</h2>
+            </div>
             <div class="dropdown">
               <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
               </div>
-              <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+              <ul tabindex="0" class="menu menu-sm text-lg dropdown-content right-0 mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                 <li><a>Home</a></li>
                 <li><a>About us</a></li>
                 <li><a>Shop</a></li>
@@ -28,14 +32,10 @@
                   <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
                 </div>
               </ul>
-              <div class="nav-brand flex gap-3 lg:hidden order-1">
-                <img src="assets/images/nav-brand.png" alt="">
-                <h2 class="text-[40px]">Fruit Burst</h2>
-              </div>
             </div>
           </div>
           <div class="navbar-center hidden lg:flex w-full justify-between">
-            <ul class="menu menu-horizontal px-1">
+            <ul class="menu menu-horizontal px-1 text-white text-lg">
               <li><a>Home</a></li>
               <li><a>About us</a></li>
               <li><a>Shop</a></li>
@@ -46,7 +46,7 @@
               <h2 class="text-[40px]">Fruit Burst</h2>
             </div>
             <div class="form-control">
-              <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
+              <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto rounded-full" />
             </div>
           </div>
         </div>

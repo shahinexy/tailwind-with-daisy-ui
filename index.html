@@ -2,164 +2,514 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>tailwind & daisy ui</title>
-    <!-- tailwind and daisy ui  -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              clifford: '#da373d',
-              'primary': '#F85559',
-            }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tailwind & daisy ui</title>
+  <!-- tailwind and daisy ui  -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            'primary': '#F85559',
           }
         }
       }
-    </script>
+    }
+  </script>
 </head>
 
 <body>
-    <header class="container max-w-[1440px] mx-auto">
-      <nav>
-        <div class="navbar bg-primary rounded-full w-full px-5 my-12">
-          <div class="flex justify-between w-full">
-            <div class="nav-brand flex gap-3 lg:hidden">
-              <img class="w-7" src="assets/images/nav-brand.png" alt="">
-              <h2 class="text-xl text-white">Fruit Burst</h2>
-            </div>
-            <div class="dropdown">
-              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-              </div>
-              <ul tabindex="0" class="menu menu-sm text-lg dropdown-content right-0 mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                <li><a>Home</a></li>
-                <li><a>About us</a></li>
-                <li><a>Shop</a></li>
-                <li><a>All Fruits</a></li>
-                <div class="form-control">
-                  <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
-                </div>
-              </ul>
-            </div>
+  <header class="container max-w-[1440px] mx-auto py-2">
+    <nav>
+      <div class="navbar bg-primary rounded-full w-full px-5 my-12">
+        <div class="flex justify-between w-full">
+          <div class="nav-brand flex gap-3 lg:hidden">
+            <img class="w-7" src="assets/images/nav-brand.png" alt="">
+            <h2 class="text-xl text-white">Fruit Burst</h2>
           </div>
-          <div class="navbar-center hidden lg:flex w-full justify-between">
-            <ul class="menu menu-horizontal px-1 text-white text-lg">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
+            </div>
+            <ul tabindex="0"
+              class="menu menu-sm text-lg dropdown-content right-0 mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
               <li><a>Home</a></li>
               <li><a>About us</a></li>
               <li><a>Shop</a></li>
               <li><a>All Fruits</a></li>
+              <div class="form-control">
+                <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
+              </div>
             </ul>
-            <div class="nav-brand flex gap-3">
-              <img src="assets/images/nav-brand.png" alt="">
-              <h2 class="text-[40px] text-white">Fruit Burst</h2>
-            </div>
-            <div class="form-control">
-              <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto rounded-full" />
-            </div>
           </div>
         </div>
-      </nav>
-      <!-- hero scetion  -->
-      <div class="heor_area">
-        <div class="carousel w-full">
-          <!-- slide 1  -->
-          <div id="slide1" class="carousel-item relative w-full ">
-              <img src="assets/images/slider1.png" class="w-full" />
-            <div class="absolute flex justify-between transform -translate-y-1/2 top-1/2 bg-blend-overlay bg-black/50	w-full h-full items-center rounded-lg px-10 pb-24">
-              <a href="#slide4" class="btn btn-circle">❮</a> 
-              
-              <div class="text-center space-y-5">
-                <h1 class="text-7xl font-extrabold text-white">Exotic tastes at your <br> doorstep</h1>
-                <p  class="text-white">We supply highly quality organic products</p>
-                <button class="btn bg-primary text-white border-0">Shop Now</button>
-              </div>
-
-              <a href="#slide2" class="btn btn-circle">❯</a>
-            </div>
-          </div> 
-          <!-- slide 2 -->
-          <div id="slide2" class="carousel-item relative w-full">
-            <img src="assets/images/slider2.png" class="w-full" />
-            <div class="absolute flex justify-between transform -translate-y-1/2 top-1/2 bg-blend-overlay bg-black/50	w-full h-full items-center rounded-lg px-10 pb-24">
-              <a href="#slide1" class="btn btn-circle">❮</a> 
-              
-              <div class="text-center space-y-5">
-                <h1 class="text-7xl font-extrabold text-white">Exotic tastes at your <br> doorstep</h1>
-                <p  class="text-white">We supply highly quality organic products</p>
-                <button class="btn bg-primary text-white border-0">Shop Now</button>
-              </div>
-
-              <a href="#slide3" class="btn btn-circle">❯</a>
-            </div>
-          </div> ]
-          <!-- slide 3 -->
-          <div id="slide3" class="carousel-item relative w-full">
-            <img src="assets/images/slider3.png" class="w-full" />
-            <div class="absolute flex justify-between transform -translate-y-1/2 top-1/2 bg-blend-overlay bg-black/50	w-full h-full items-center rounded-lg px-10 pb-24">
-              <a href="#slide2" class="btn btn-circle">❮</a> 
-              
-              <div class="text-center space-y-5">
-                <h1 class="text-7xl font-extrabold text-white">Exotic tastes at your <br> doorstep</h1>
-                <p  class="text-white">We supply highly quality organic products</p>
-                <button class="btn bg-primary text-white border-0">Shop Now</button>
-              </div>
-
-              <a href="#slide4" class="btn btn-circle">❯</a>
-            </div>
-          </div> 
-          <!-- slide 4 -->
-          <div id="slide4" class="carousel-item relative w-full">
-            <img src="assets/images/slider4.png" class="w-full" />
-            <div class="absolute flex justify-between transform -translate-y-1/2 top-1/2 bg-blend-overlay bg-black/50	w-full h-full items-center rounded-lg px-10 pb-24">
-              <a href="#slide3" class="btn btn-circle">❮</a> 
-              
-              <div class="text-center space-y-5">
-                <h1 class="text-7xl font-extrabold text-white">Exotic tastes at your <br> doorstep</h1>
-                <p  class="text-white">We supply highly quality organic products</p>
-                <button class="btn bg-primary text-white border-0">Shop Now</button>
-              </div>
-
-              <a href="#slide1" class="btn btn-circle">❯</a>
-            </div>
-          </div> 
-        </div>        
-      </div>
-      <!-- fruits cards  -->
-      <div class="hidden md:block mx-24  relative bottom-32  bg-white rounded-xl shadow-md">
-        <div class="card-container grid lg:grid-cols-5 md:grid-cols-3  gap-24 py-12 px-16">
-          <div class="card text-center">
-            <img src="assets/images/pngwing 1.png" alt="">
-            <p class="text-xl mt-5">Strawberry</p>
+        <div class="navbar-center hidden lg:flex w-full justify-between">
+          <ul class="menu menu-horizontal px-1 text-white text-lg">
+            <li><a>Home</a></li>
+            <li><a>About us</a></li>
+            <li><a>Shop</a></li>
+            <li><a>All Fruits</a></li>
+          </ul>
+          <div class="nav-brand flex gap-3">
+            <img src="assets/images/nav-brand.png" alt="">
+            <h2 class="text-[40px] text-white">Fruit Burst</h2>
           </div>
-          <div class="card text-center">
-            <img src="assets/images/pngwing 2.png" alt="">
-            <p class="text-xl mt-5">Strawberry</p>
-          </div>
-          <div class="card text-center">
-            <img src="assets/images/pngwing 3.png" alt="">
-            <p class="text-xl mt-5">Strawberry</p>
-          </div>
-          <div class="card text-center">
-            <img src="assets/images/pngwing 4.png" alt="">
-            <p class="text-xl mt-5">Strawberry</p>
-          </div>
-          <div class="card text-center">
-            <img src="assets/images/oreng.png" alt="">
-            <p class="text-xl mt-5">Strawberry</p>
+          <div class="form-control">
+            <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto rounded-full" />
           </div>
         </div>
       </div>
-    </header>
-    <main>
+    </nav>
+    <!-- hero scetion  -->
+    <div class="heor_area">
+      <div class="carousel w-full">
+        <!-- slide 1  -->
+        <div id="slide1" class="carousel-item relative w-full ">
+          <img src="assets/images/slider1.png" class="w-full" />
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 top-1/2 bg-blend-overlay bg-black/50	w-full h-full items-center rounded-lg px-10 pb-24">
+            <a href="#slide4" class="btn btn-circle">❮</a>
 
-    </main>
-    <footer>
+            <div class="text-center space-y-5">
+              <h1 class="text-7xl font-extrabold text-white">Exotic tastes at your <br> doorstep</h1>
+              <p class="text-white">We supply highly quality organic products</p>
+              <button class="btn bg-primary text-white border-0">Shop Now</button>
+            </div>
 
-    </footer>
+            <a href="#slide2" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <!-- slide 2 -->
+        <div id="slide2" class="carousel-item relative w-full">
+          <img src="assets/images/slider2.png" class="w-full" />
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 top-1/2 bg-blend-overlay bg-black/50	w-full h-full items-center rounded-lg px-10 pb-24">
+            <a href="#slide1" class="btn btn-circle">❮</a>
+
+            <div class="text-center space-y-5">
+              <h1 class="text-7xl font-extrabold text-white">Exotic tastes at your <br> doorstep</h1>
+              <p class="text-white">We supply highly quality organic products</p>
+              <button class="btn bg-primary text-white border-0">Shop Now</button>
+            </div>
+
+            <a href="#slide3" class="btn btn-circle">❯</a>
+          </div>
+        </div> ]
+        <!-- slide 3 -->
+        <div id="slide3" class="carousel-item relative w-full">
+          <img src="assets/images/slider3.png" class="w-full" />
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 top-1/2 bg-blend-overlay bg-black/50	w-full h-full items-center rounded-lg px-10 pb-24">
+            <a href="#slide2" class="btn btn-circle">❮</a>
+
+            <div class="text-center space-y-5">
+              <h1 class="text-7xl font-extrabold text-white">Exotic tastes at your <br> doorstep</h1>
+              <p class="text-white">We supply highly quality organic products</p>
+              <button class="btn bg-primary text-white border-0">Shop Now</button>
+            </div>
+
+            <a href="#slide4" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <!-- slide 4 -->
+        <div id="slide4" class="carousel-item relative w-full">
+          <img src="assets/images/slider4.png" class="w-full" />
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 top-1/2 bg-blend-overlay bg-black/50	w-full h-full items-center rounded-lg px-10 pb-24">
+            <a href="#slide3" class="btn btn-circle">❮</a>
+
+            <div class="text-center space-y-5">
+              <h1 class="text-7xl font-extrabold text-white">Exotic tastes at your <br> doorstep</h1>
+              <p class="text-white">We supply highly quality organic products</p>
+              <button class="btn bg-primary text-white border-0">Shop Now</button>
+            </div>
+
+            <a href="#slide1" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- fruits card  -->
+    <div class="hidden md:block mx-24  relative bottom-32  bg-white rounded-xl shadow-md">
+      <div class="card-container grid lg:grid-cols-5 md:grid-cols-3  gap-24 py-12 px-16">
+        <div class="card text-center">
+          <img src="assets/images/pngwing 1.png" alt="">
+          <p class="text-xl mt-5">Strawberry</p>
+        </div>
+        <div class="card text-center">
+          <img src="assets/images/pngwing 2.png" alt="">
+          <p class="text-xl mt-5">Strawberry</p>
+        </div>
+        <div class="card text-center">
+          <img src="assets/images/pngwing 3.png" alt="">
+          <p class="text-xl mt-5">Strawberry</p>
+        </div>
+        <div class="card text-center">
+          <img src="assets/images/pngwing 4.png" alt="">
+          <p class="text-xl mt-5">Strawberry</p>
+        </div>
+        <div class="card text-center">
+          <img src="assets/images/oreng.png" alt="">
+          <p class="text-xl mt-5">Strawberry</p>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- main section  -->
+  <main class="container max-w-[1440px] mx-auto py-2">
+    <!-- Deal of the day -->
+    <section class="mb-24">
+      <div class="flex items-center justify-between">
+        <div class="flex-1 ">
+          <h1 class="text-5xl">Deal of the day</h1>
+          <p>Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin
+            literature from 45 BC, making it over 2000 years old.</p>
+        </div>
+        <div class="counter flex-1 flex justify-end">
+          <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
+            <div class="flex flex-col">
+              <span class="countdown font-mono text-5xl">
+                <span style="--value:15;"></span>
+              </span>
+              days
+            </div>
+            <div class="flex flex-col">
+              <span class="countdown font-mono text-5xl">
+                <span style="--value:10;"></span>
+              </span>
+              hours
+            </div>
+            <div class="flex flex-col">
+              <span class="countdown font-mono text-5xl">
+                <span style="--value:24;"></span>
+              </span>
+              min
+            </div>
+            <div class="flex flex-col">
+              <span class="countdown font-mono text-5xl">
+                <span style="--value:54;"></span>
+              </span>
+              sec
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- card section  -->
+    <section>
+      <div class="card-container grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 gap-6 md:mb-12 mb-5">
+        <!-- card 1  -->
+        <div class="card  border border-gray-300 ">
+          <figure class="px-10 pt-10">
+            <img src="assets/images/pngwing 5.png" alt="Shoes" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">12.90$ - 18.85$</h2>
+            <hr class="h-[1px] w-full bg-gray-600">
+            <p>Apples</p>
+            <!-- stars  -->
+            <div class="star my-6">
+              <div class="rating rating-lg rating-half">
+                <input type="radio" name="rating-10" class="rating-hidden" />
+                <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-1" />
+                <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-2" />
+                <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-1" checked />
+                <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-2" />
+                <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-1" />
+                <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-2" />
+                <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-1" />
+                <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-2" />
+                <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-1" />
+                <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-2" />
+              </div>
+            </div>
+            <div class="card-actions">
+              <!-- modal -->
+              <!-- Open the modal using ID.showModal() method -->
+              <button class=" text-primary text-lg font-bold hover:bg-red-300 px-5 py-2 rounded-lg" onclick="my_modal_1.showModal()">Details</button>
+              <dialog id="my_modal_1" class="modal">
+                <div class="">
+
+                  <div class="card-container grid-cols-1 md:grid-cols-2  lg:grid-cols-4">
+                    <div class="card w-96 bg-base-100 shadow-xl">
+                      <figure class="px-10 pt-10">
+                        <img src="assets/images/pngwing 5.png" alt="Shoes" class="rounded-xl" />
+                      </figure>
+                      <div class="card-body items-center text-center">
+                        <h2 class="card-title">12.90$ - 18.85$</h2>
+                        <hr class="h-[1px] w-full bg-gray-600">
+                        <p>Apples</p>
+                        <!-- stars  -->
+                        <div class="star my-6">
+                          <div class="rating rating-lg rating-half">
+                            <input type="radio" name="rating-10" class="rating-hidden" />
+                            <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-1"
+                              checked />
+                            <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-2" />
+                          </div>
+                        </div>
+                        <div class="card-actions">
+                          <!-- modal -->
+                          <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn">Close</button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </dialog>
+            </div>
+          </div>
+        </div>
+        <!-- card 2  -->
+        <div class="card  border border-gray-300 ">
+          <figure class="px-10 pt-10">
+            <img src="assets/images/pngwing 6.png" alt="Shoes" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">12.90$ - 18.85$</h2>
+            <hr class="h-[1px] w-full bg-gray-600">
+            <p>Apples</p>
+            <!-- stars  -->
+            <div class="star my-6">
+              <div class="rating rating-lg rating-half">
+                <input type="radio" name="rating-10" class="rating-hidden" />
+                <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-1" />
+                <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-2" />
+                <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-1" checked />
+                <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-2" />
+                <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-1" />
+                <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-2" />
+                <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-1" />
+                <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-2" />
+                <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-1" />
+                <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-2" />
+              </div>
+            </div>
+            <div class="card-actions">
+              <!-- modal -->
+              <!-- Open the modal using ID.showModal() method -->
+              <button class=" text-primary text-lg font-bold hover:bg-red-300 px-5 py-2 rounded-lg" onclick="my_modal_2.showModal()">Details</button>
+              <dialog id="my_modal_2" class="modal">
+                <div class="">
+
+                  <div class="card-container grid-cols-1 md:grid-cols-2  lg:grid-cols-4">
+                    <div class="card w-96 bg-base-100 shadow-xl">
+                      <figure class="px-10 pt-10">
+                        <img src="assets/images/pngwing 6.png" alt="Shoes" class="rounded-xl" />
+                      </figure>
+                      <div class="card-body items-center text-center">
+                        <h2 class="card-title">12.90$ - 18.85$</h2>
+                        <hr class="h-[1px] w-full bg-gray-600">
+                        <p>Apples</p>
+                        <!-- stars  -->
+                        <div class="star my-6">
+                          <div class="rating rating-lg rating-half">
+                            <input type="radio" name="rating-10" class="rating-hidden" />
+                            <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-1"
+                              checked />
+                            <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-2" />
+                          </div>
+                        </div>
+                        <div class="card-actions">
+                          <!-- modal -->
+                          <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn">Close</button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </dialog>
+            </div>
+          </div>
+        </div>
+        <!-- card 3  -->
+        <div class="card  border border-gray-300 ">
+          <figure class="px-10 pt-10">
+            <img src="assets/images/pngwing 7.png" alt="Shoes" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">12.90$ - 18.85$</h2>
+            <hr class="h-[1px] w-full bg-gray-600">
+            <p>Apples</p>
+            <!-- stars  -->
+            <div class="star my-6">
+              <div class="rating rating-lg rating-half">
+                <input type="radio" name="rating-10" class="rating-hidden" />
+                <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-1" />
+                <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-2" />
+                <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-1" checked />
+                <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-2" />
+                <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-1" />
+                <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-2" />
+                <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-1" />
+                <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-2" />
+                <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-1" />
+                <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-2" />
+              </div>
+            </div>
+            <div class="card-actions">
+              <!-- modal -->
+              <!-- Open the modal using ID.showModal() method -->
+              <button class=" text-primary text-lg font-bold hover:bg-red-300 px-5 py-2 rounded-lg" onclick="my_modal_3.showModal()">Details</button>
+              <dialog id="my_modal_3" class="modal">
+                <div class="">
+
+                  <div class="card-container grid-cols-1 md:grid-cols-2  lg:grid-cols-4">
+                    <div class="card w-96 bg-base-100 shadow-xl">
+                      <figure class="px-10 pt-10">
+                        <img src="assets/images/pngwing 7.png" alt="Shoes" class="rounded-xl" />
+                      </figure>
+                      <div class="card-body items-center text-center">
+                        <h2 class="card-title">12.90$ - 18.85$</h2>
+                        <hr class="h-[1px] w-full bg-gray-600">
+                        <p>Apples</p>
+                        <!-- stars  -->
+                        <div class="star my-6">
+                          <div class="rating rating-lg rating-half">
+                            <input type="radio" name="rating-10" class="rating-hidden" />
+                            <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-1"
+                              checked />
+                            <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-2" />
+                          </div>
+                        </div>
+                        <div class="card-actions">
+                          <!-- modal -->
+                          <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn">Close</button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </dialog>
+            </div>
+          </div>
+        </div>
+        <!-- card 3  -->
+        <div class="card  border border-gray-300 ">
+          <figure class="px-10 pt-10">
+            <img src="assets/images/pngwing 8.png" alt="Shoes" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">12.90$ - 18.85$</h2>
+            <hr class="h-[1px] w-full bg-gray-600">
+            <p>Apples</p>
+            <!-- stars  -->
+            <div class="star my-6">
+              <div class="rating rating-lg rating-half">
+                <input type="radio" name="rating-10" class="rating-hidden" />
+                <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-1" />
+                <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-2" />
+                <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-1" checked />
+                <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-2" />
+                <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-1" />
+                <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-2" />
+                <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-1" />
+                <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-2" />
+                <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-1" />
+                <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-2" />
+              </div>
+            </div>
+            <div class="card-actions">
+              <!-- modal -->
+              <!-- Open the modal using ID.showModal() method -->
+              <button class=" text-primary text-lg font-bold hover:bg-red-300 px-5 py-2 rounded-lg" onclick="my_modal_4.showModal()">Details</button>
+              <dialog id="my_modal_4" class="modal">
+                <div class="">
+
+                  <div class="card-container grid-cols-1 md:grid-cols-2  lg:grid-cols-4">
+                    <div class="card w-96 bg-base-100 shadow-xl">
+                      <figure class="px-10 pt-10">
+                        <img src="assets/images/pngwing 8.png" alt="Shoes" class="rounded-xl" />
+                      </figure>
+                      <div class="card-body items-center text-center">
+                        <h2 class="card-title">12.90$ - 18.85$</h2>
+                        <hr class="h-[1px] w-full bg-gray-600">
+                        <p>Apples</p>
+                        <!-- stars  -->
+                        <div class="star my-6">
+                          <div class="rating rating-lg rating-half">
+                            <input type="radio" name="rating-10" class="rating-hidden" />
+                            <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-1"
+                              checked />
+                            <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-10" class="bg-primary mask mask-star-2 mask-half-2" />
+                          </div>
+                        </div>
+                        <div class="card-actions">
+                          <!-- modal -->
+                          <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn">Close</button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </dialog>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- team section  -->
+    
+
+
+  </main>
+  <!-- footer section  -->
+  <footer>
+
+  </footer>
 </body>
 
 </html>
